@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="35dp"
+    android:paddingHorizontal="20dp"
+    android:paddingBottom="60dp"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_habit"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="15dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/hint_name"
+        android:textColor="@color/black"
+        app:cursorColor="@color/blue"
+        app:boxStrokeColor="@color/textinput_stroke_color"
+        app:hintTextColor="@color/textinput_text_color"
+        android:textColorHint="@color/blueGray"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:textColor="@color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/hint_description"
+        app:cursorColor="@color/blue"
+        app:boxStrokeColor="@color/textinput_stroke_color"
+        app:hintTextColor="@color/textinput_text_color"
+        android:textColorHint="@color/blueGray"
+        android:textColor="@color/black"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:maxLines="2"
+            android:textColor="@color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:hint="@string/hint_target"
+        app:cursorColor="@color/blue"
+        app:boxStrokeColor="@color/textinput_stroke_color"
+        app:hintTextColor="@color/textinput_text_color"
+        android:textColorHint="@color/blueGray"
+        android:textColor="@color/black"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTargetCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textColor="@color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/habit_time_of_day"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+    <RadioGroup
+        android:id="@+id/rgTimeOfDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbMorning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:buttonTint="@color/radio_button_color"
+            android:text="@string/morning"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/rbDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:buttonTint="@color/radio_button_color"
+            android:text="@string/day"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/rbEvening"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:buttonTint="@color/radio_button_color"
+            android:text="@string/evening"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/rbAny"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:buttonTint="@color/radio_button_color"
+            android:text="@string/anytime"
+            android:textColor="@color/black"
+            android:checked="true"/>
+    </RadioGroup>
+
+    <View
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        style="?android:attr/buttonBarStyle">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cancel"
+            android:backgroundTint="@color/gray"
+            android:textColor="@color/black"
+            android:layout_marginEnd="8dp"
+            style="?android:attr/buttonBarButtonStyle"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/save"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/black"
+            android:layout_marginStart="8dp"
+            style="?android:attr/buttonBarButtonStyle"/>
+    </LinearLayout>
+
+</LinearLayout>

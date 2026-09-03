@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNav"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/history"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"/>
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shownWeekCount="4"
+            android:weekDayTextAppearance="@color/black"
+            android:dateTextAppearance="@style/CalendarDateTextStyle"
+            android:theme="@style/CalendarViewTheme"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/todays_habits"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="15dp" />
+
+        <TextView
+            android:id="@+id/tvEmptyHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_data"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHistory"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cyan"
+        app:itemTextColor="@color/darkerYetDarker"
+        app:itemIconTint="@color/darkerYetDarker"
+        android:theme="@style/CustomNavTheme"
+        app:itemRippleColor="@android:color/transparent"
+        app:menu="@menu/bottom_nav_menu"/>
+
+</RelativeLayout>

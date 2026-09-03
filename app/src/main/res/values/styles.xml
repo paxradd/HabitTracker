@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CalendarDateTextStyle" parent="android:TextAppearance">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="CalendarViewTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorControlActivated">@color/blue</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorPrimaryInverse">@color/black</item>
+    </style>
+
+    <style name="CustomNavTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorAccent">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
+    </style>
+</resources>

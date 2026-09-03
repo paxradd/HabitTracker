@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Habit Tracker</string>
+    <string name="today">Сегодня</string>
+    <string name="sample">Тест</string>
+    <string name="add_habit">Добавить задание</string>
+    <string name="new_habit">Новое задание</string>
+    <string name="hint_name">Название*</string>
+    <string name="hint_description">Описание (необязательно)</string>
+    <string name="hint_target">Количество в день*</string>
+    <string name="habit_time_of_day">Время выполнения задания</string>
+    <string name="morning">🌅Утро</string>
+    <string name="day">☀️День</string>
+    <string name="evening">🌙Вечер</string>
+    <string name="anytime">🕐Любое</string>
+    <string name="cancel">ОТМЕНА</string>
+    <string name="save">СОХРАНИТЬ</string>
+    <string name="history">История</string>
+    <string name="todays_habits">Задания на день:</string>
+    <string name="no_data">Нет данных</string>
+    <string name="plus">+</string>
+</resources>
